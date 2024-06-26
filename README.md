@@ -4,7 +4,7 @@ Welcome to my DSA (Data Structures and Algorithms) Solutions repository! Here, y
 
 ## About Me
 
-Hello! I'm [Prathamesh Vinay Kirad], a passionate programmer with a keen interest in data structures and algorithms. I created this repository to document my journey through learning and mastering DSA concepts. By sharing my solutions and explanations, I hope to help others who are on the same path.
+Hello! I'm Prathamesh Vinay Kirad, a passionate programmer with a keen interest in data structures and algorithms. I created this repository to document my journey through learning and mastering DSA concepts. By sharing my solutions and explanations, I hope to help others who are on the same path.
 
 ## Repository Overview
 
