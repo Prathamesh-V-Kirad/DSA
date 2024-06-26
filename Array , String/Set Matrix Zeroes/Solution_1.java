@@ -27,3 +27,9 @@ class Solution {
         }
     }
 }
+
+
+/*
+Runtime 36ms
+Memory  45.73MB
+*/
