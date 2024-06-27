@@ -2,15 +2,14 @@ class Solution {
     public List<List<Integer>> generate(int numRows) {
 	    List<List<Integer>> triangle = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
-            List<Integer> row = new ArrayList<>();
+            triangle.add(new ArrayList<>());
             for (int j = 0; j <= i; j++) {
                 if (j == 0 || j == i) {
-                    row.add(1);
+                    triangle.get(i).add(1);
                 } else {
-                    row.add(triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j));
+                    triangle.get(i).add(triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j));
                 }
             }
-            triangle.add(row);
         }
         return triangle;
     }
@@ -19,5 +18,5 @@ class Solution {
 
 /*
 Runtime 1ms
-Memory  41.82MB
+Memory  41.71MB
 */
