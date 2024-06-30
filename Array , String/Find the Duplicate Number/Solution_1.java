@@ -13,5 +13,5 @@ class Solution {
 
 /*
 Runtime 1ms
-Memory  57.84
+Memory  57.84MB
  */
