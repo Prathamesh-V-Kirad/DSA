@@ -1,38 +1,34 @@
-class Solution {
+public class Solution {
     public String decodeString(String s) {
         Stack<Integer> counts = new Stack<>();
-        Stack<String> resultStack = new Stack<>();
-        String result = "";
+        Stack<StringBuilder> resultStack = new Stack<>();
+        StringBuilder result = new StringBuilder();
         int index = 0;
+        int count = 0;
 
         while (index < s.length()) {
             char c = s.charAt(index);
             
             if (Character.isDigit(c)) {
-                int count = 0;
-                while (Character.isDigit(s.charAt(index))) {
-                    count = count * 10 + (s.charAt(index) - '0');
-                    index++;
-                }
-                counts.push(count);
+                count = count * 10 + (s.charAt(index) - '0');
             } else if (c == '[') {
+                counts.push(count);
+                count = 0;
                 resultStack.push(result);
-                result = "";
-                index++;
+                result = new StringBuilder();
             } else if (c == ']') {
-                StringBuilder temp = new StringBuilder(resultStack.pop());
+                StringBuilder temp = resultStack.pop();
                 int repeatTimes = counts.pop();
                 for (int i = 0; i < repeatTimes; i++) {
                     temp.append(result);
                 }
-                result = temp.toString();
-                index++;
+                result = temp;
             } else {
-                result += c;
-                index++;
+                result.append(c);
             }
+            index++;
         }
 
-        return result;
+        return result.toString();
     }
 }
